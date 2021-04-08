@@ -1,0 +1,131 @@
+body {
+  background-color: #9ddfd3;
+  font-family: 'Lato', sans-serif;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  color: #31326f;
+  text-shadow: 1px 1px #ffc93c;
+}
+
+.start {
+  font-family: 'Gamja Flower', cursive;
+  font-size: 30px;
+  color: #ffc93c;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start:hover {
+  font-size: 34px;
+}
+
+.start:active {
+  font-size: 34px;
+  border: none;
+  outline: none;
+}
+
+
+.game-container {
+  background-color: #dbf6e9;
+
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 350px;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-radius: 44px;
+  padding: 5px;
+}
+
+.game-cell {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+
+  font-size: 0px;
+  text-align: center;
+  line-height: 100px;
+
+  font-weight: bold;
+  color: #ffc93c;
+  background-color: #31326f;
+  box-shadow: 4px 4px #ffc93c;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.game-cell:active {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  background-color: #ffc93c;
+  box-shadow: none;
+}
+
+.q {
+  border-radius: 40% 8px 8px 8px;
+}
+
+.w {
+  border-radius: 8px;
+}
+
+.e {
+  border-radius: 8px 40% 8px 8px;
+}
+
+.a {
+  border-radius: 8px;
+}
+
+.s {
+  border-radius: 8px;
+}
+
+.d {
+  border-radius: 8px;
+}
+
+.z {
+  border-radius: 8px 8px 8px 40%;
+}
+
+.x {
+  border-radius: 8px;
+}
+
+.c {
+  border-radius: 8px 8px 40% 8px;
+}
+
+/* JS Added Classes */
+.hidden {
+  visibility: hidden;
+}
+
+.highlight {
+  background-color: #ffc93c;
+  box-shadow: none;
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
