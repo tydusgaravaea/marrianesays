@@ -14,6 +14,7 @@ var initialPattern = [];
 var index = 0;
 var userPattern = [];
 var level = 0;
+var over = false;
 
 // Debug variables
 var startSeqVar = 1;
@@ -28,6 +29,8 @@ $(".start").click(function() {
 // create pattern, play/show pattern,
 // then calls function for user input
 function startSeq(seq) {
+  over = false;
+
   // Change Level text
   level++;
   $(".header").text("Level " + (level));
@@ -90,6 +93,9 @@ async function showSeq(arr) {
     await wait(300);
     $("div." + arr[i]).removeClass("highlight");
     await wait(300);
+    if (over) {
+      break;
+    }
   }
 }
 
@@ -111,6 +117,7 @@ function gameOver() {
   initialPattern = [];
   index = 0;
   level = 0;
+  over = true;
   userPattern = [];
   $(".start").removeClass("hidden");
   $(".header").text("Game Over");
